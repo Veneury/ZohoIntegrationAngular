@@ -6,18 +6,18 @@ export const navbarData = [
     },
     {
       routeLink: 'clientes/create',
-      icon: 'fal fa-box-open',
+      icon: 'fal fa-users',
       label: 'Clientes',
     },
     {
       routeLink: 'posibles_clientes/create',
-      icon: 'fal fa-chart-bar',
+      icon: 'fal fa-user-plus',
       label: 'Posibles Clientes',
     },
     {
-      routeLink: 'statistics',
-      icon: 'fal fa-chart-bar',
-      label: 'Statistics',
+      routeLink: 'tareas/create',
+      icon: 'fal fa-user-tag',
+      label: 'Tareas',
     },
   ];
   

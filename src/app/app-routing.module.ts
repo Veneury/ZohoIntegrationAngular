@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CreateClientesComponent } from './clientes/create-clientes/create-clientes.component';
 import { HomeComponent } from './home/home.component';
 import { CreatePosiblesClientesComponent } from './posibles_clientes/create-posibles-clientes/create-posibles-clientes.component';
+import { CreateTareasComponent } from './tareas/create-tareas/create-tareas.component';
 
 const routes: Routes = [
   //Home Routes
@@ -14,6 +15,9 @@ const routes: Routes = [
 
   //Posibles Clientes Routes
   { path: 'posibles_clientes/create', component: CreatePosiblesClientesComponent },
+
+  //Tareas Routes
+  { path: 'tareas/create', component: CreateTareasComponent },
 ];
 
 @NgModule({
