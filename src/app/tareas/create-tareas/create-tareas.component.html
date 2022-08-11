@@ -1,1 +1,80 @@
-<p>create-tareas works!</p>
+<i class="fal fa-user-tag fa-lg fa-3x"> Asignar tareas</i>
+<br>
+
+<h3 style="margin-top: 2%;">Información de la tarea</h3>
+<form class="row g-3">
+    <div class="col-md-12">
+        <label for="inputTitularTarea" class="form-label">Titular de la tarea</label>
+        <input type="text" class="form-control" id="inputTitularTarea">
+    </div>
+    <div class="col-md-12">
+        <label for="inputAsunto" class="form-label">Asunto</label>
+        <input type="text" class="form-control" id="inputAsunto">
+    </div>
+    <div class="col-md-12">
+        <label for="inputFecha" class="form-label">Fecha de vencimiento</label>
+        <input type="date" class="form-control" id="inputFecha">
+    </div>
+    <div class="row" style="margin-top: 1%;">
+        <label for="Default select example" class="form-label">Seleccionar</label>
+        <div class="col-md-6">
+            <select class="form-select" aria-label="Default select example">
+            <option selected value="1">Contacto</option>
+            <option value="2">Posible cliente</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control" id="Default select example">
+        </div>
+    </div>
+    <div class="row" style="margin-top: 1%;">
+        <label for="Default select example" class="form-label">Seleccionar</label>
+        <div class="col-md-6">
+            <select class="form-select" aria-label="Default select example">
+            <option selected value="1">Cuenta</option>
+            <option value="2">Trato</option>
+            <option value="3">Producto</option>
+            <option value="4">Presupuesto</option>
+            <option value="5">Orden de venta</option>
+            <option value="6">Orden de compra</option>
+            <option value="7">Factura</option>
+            <option value="8">Campaña</option>
+            <option value="9">Proveedor</option>
+            <option value="10">Caso</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control" id="Default select example">
+        </div>
+    </div>
+    <div class="col-md-12">
+        <label for="inputEstado" class="form-label">Estado</label>
+        <input type="text" class="form-control" id="inputEstado">
+    </div>
+    <div class="col-md-12">
+        <label for="inputPrioridad" class="form-label">Prioridad</label>
+        <input type="text" class="form-control" id="inputPrioridad">
+    </div>
+    <div class="col-md-12">
+        <input class="form-check-input" type="checkbox" role="switch" id="Recordatorio">
+        <label class="form-check-label" for="Recordatorio"> Recordatorio</label>
+    </div>
+    <div class="col-md-12">
+        <input class="form-check-input" type="checkbox" role="switch" id="Repetir">
+        <label class="form-check-label" for="Repetir"> Repetir</label>
+    </div>
+</form>
+
+<h3 style="margin-top: 4%;">Información de la descripción</h3>
+<form class="row g-3" style="margin-top: 1%;">
+    <div class="col-md-12">
+        <label for="inputDescripcion" class="form-label">Descripción</label>
+        <textarea class="form-control" id="inputDescripcion" rows="3"></textarea>
+    </div>
+</form>
+<br>
+
+<div class="d-grid gap-2 d-md-block">
+    <button type="submit" class="btn btn-success col-md-3 mb-2">Guardar</button>
+    <button type="submit" class="btn btn-danger col-md-3 mx-2 mb-2" style="color: #fff;">Cancelar</button>
+</div>

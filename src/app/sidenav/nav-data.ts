@@ -5,17 +5,17 @@ export const navbarData = [
       label: 'Inicio',
     },
     {
-      routeLink: 'clientes/create',
+      routeLink: 'clientes/list',
       icon: 'fal fa-users',
       label: 'Clientes',
     },
     {
-      routeLink: 'posibles_clientes/create',
+      routeLink: 'posibles_clientes/list',
       icon: 'fal fa-user-plus',
       label: 'Posibles Clientes',
     },
     {
-      routeLink: 'tareas/create',
+      routeLink: 'tareas/list',
       icon: 'fal fa-user-tag',
       label: 'Tareas',
     },
