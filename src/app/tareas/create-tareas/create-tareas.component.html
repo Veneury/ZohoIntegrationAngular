@@ -2,30 +2,18 @@
 <br>
 
 <h3 style="margin-top: 2%;">Información de la tarea</h3>
-<form class="row g-3">
+<form [formGroup]="tasksForm" class="row g-3">
     <div class="col-md-12">
         <label for="inputTitularTarea" class="form-label">Titular de la tarea</label>
-        <input type="text" class="form-control" id="inputTitularTarea">
+        <input formControlName="Owner" type="text" class="form-control" id="inputTitularTarea">
     </div>
     <div class="col-md-12">
         <label for="inputAsunto" class="form-label">Asunto</label>
-        <input type="text" class="form-control" id="inputAsunto">
+        <input formControlName="Subject" type="text" class="form-control" id="inputAsunto">
     </div>
     <div class="col-md-12">
         <label for="inputFecha" class="form-label">Fecha de vencimiento</label>
-        <input type="date" class="form-control" id="inputFecha">
-    </div>
-    <div class="row" style="margin-top: 1%;">
-        <label for="Default select example" class="form-label">Seleccionar</label>
-        <div class="col-md-6">
-            <select class="form-select" aria-label="Default select example">
-            <option selected value="1">Contacto</option>
-            <option value="2">Posible cliente</option>
-          </select>
-        </div>
-        <div class="col-md-6">
-            <input type="text" class="form-control" id="Default select example">
-        </div>
+        <input formControlName="Due_Date" type="date" class="form-control" id="inputFecha">
     </div>
     <div class="row" style="margin-top: 1%;">
         <label for="Default select example" class="form-label">Seleccionar</label>
@@ -44,37 +32,31 @@
           </select>
         </div>
         <div class="col-md-6">
-            <input type="text" class="form-control" id="Default select example">
+            <input formControlName="$se_module" type="text" class="form-control" id="Default select example">
         </div>
     </div>
     <div class="col-md-12">
         <label for="inputEstado" class="form-label">Estado</label>
-        <input type="text" class="form-control" id="inputEstado">
+        <input formControlName="Status" type="text" class="form-control" id="inputEstado">
     </div>
     <div class="col-md-12">
         <label for="inputPrioridad" class="form-label">Prioridad</label>
-        <input type="text" class="form-control" id="inputPrioridad">
+        <input formControlName="Priority" type="text" class="form-control" id="inputPrioridad">
     </div>
     <div class="col-md-12">
-        <input class="form-check-input" type="checkbox" role="switch" id="Recordatorio">
+        <input formControlName="Remind_At" class="form-check-input" type="checkbox" role="switch" id="Recordatorio">
         <label class="form-check-label" for="Recordatorio"> Recordatorio</label>
     </div>
-    <div class="col-md-12">
-        <input class="form-check-input" type="checkbox" role="switch" id="Repetir">
-        <label class="form-check-label" for="Repetir"> Repetir</label>
-    </div>
-</form>
 
-<h3 style="margin-top: 4%;">Información de la descripción</h3>
-<form class="row g-3" style="margin-top: 1%;">
-    <div class="col-md-12">
+    <h3 style="margin-top: 4%;">Información de la descripción</h3>
+    <div class=" row g-3 col-md-12" style="margin-top: 1%;">
         <label for="inputDescripcion" class="form-label">Descripción</label>
-        <textarea class="form-control" id="inputDescripcion" rows="3"></textarea>
+        <textarea formControlName="Description" class="form-control" id="inputDescripcion" rows="3"></textarea>
     </div>
 </form>
 <br>
 
 <div class="d-grid gap-2 d-md-block">
-    <button type="submit" class="btn btn-success col-md-3 mb-2">Guardar</button>
+    <button type="submit" class="btn btn-success col-md-3 mb-2" (click)="saveTasks()">Guardar</button>
     <button type="submit" class="btn btn-danger col-md-3 mx-2 mb-2" style="color: #fff;">Cancelar</button>
 </div>
