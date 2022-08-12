@@ -2,3 +2,43 @@
 <br><br>
 <button class="btn btn-primary"><a href="posibles_clientes/create"
         style="text-decoration: none; color: #fff; margin-top: 2%;">Agregar nuevo posible cliente</a></button>
+        <!-- <div class="container">
+          <div class="row">
+              <pre>
+                {{resultLeads | json}}
+              </pre>
+
+
+              <ul>
+                <li *ngFor="let item of resultLeads">{{item.Company}}</li>
+              </ul>
+          </div>
+        </div> -->
+        <div class="container">
+          <div class="row">
+            <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Company</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Website</th>
+                  <th scope="col">currency_symbol</th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider">
+                <tr *ngFor="let item of resultLeads">
+                  <th scope="row">1</th>
+                  <td>{{item.Company}}</td>
+                  <td>{{item.Email}}</td>
+                  <td>{{item.Phone}}</td>
+                  <td>{{item.$currency_symbol}}</td>
+                  <td>{{item.Website}}</td>
+
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          </div>
+        </div>

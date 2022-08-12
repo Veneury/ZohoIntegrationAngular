@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { ListClientesComponent } from './clientes/list-clientes/list-clientes.component';
 import { CreateClientesComponent } from './clientes/create-clientes/create-clientes.component';
@@ -16,9 +17,11 @@ import { LoginTemplateComponent } from './login/login-template/login-template.co
 import { BodyComponent } from './body/body.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { HomeComponent } from './home/home.component';
+import { ZohoInterceptor } from './interceptor/Zoho.intercertor';
+
 
 @NgModule({
-  declarations:[
+  declarations: [
     AppComponent,
     ListClientesComponent,
     CreateClientesComponent,
@@ -33,12 +36,22 @@ import { HomeComponent } from './home/home.component';
     BodyComponent,
     SidenavComponent,
     HomeComponent
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ZohoInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiurl:'http://www.zohoapis.com/crm/v2/'
 };
