@@ -13,7 +13,7 @@ export class SidenavComponent implements OnInit {
   constructor() { }
 
   @Output() onToggleSideNav: EventEmitter<SideNavToggleInterface> = new EventEmitter();
-  collapsed: boolean = false;
+  collapsed: boolean = true;
   screenWidth: number = 0;
   navData = navbarData;
 
@@ -28,15 +28,16 @@ export class SidenavComponent implements OnInit {
 
   ngOnInit(): void {
     this.screenWidth = window.innerWidth;
+    this.onToggleSideNav.emit({ collapsed: this.collapsed, screenWidth: this.screenWidth });
   }
 
   toggleCollapse(): void {
-    this.collapsed = !this.collapsed;
+    // this.collapsed = !this.collapsed;
     this.onToggleSideNav.emit({ collapsed: this.collapsed, screenWidth: this.screenWidth });
   }
 
   closeSidenav(): void {
-    this.collapsed = false;
+    // this.collapsed = false;
     this.onToggleSideNav.emit({ collapsed: this.collapsed, screenWidth: this.screenWidth });
   }
 
