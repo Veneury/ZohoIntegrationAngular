@@ -19,5 +19,9 @@ export const navbarData = [
       icon: 'fal fa-user-tag',
       label: 'Tareas',
     },
+    {
+      routeLink: 'notas/list',
+      icon: 'fal fa-list',
+      label: 'Notas',
+    },
   ];
-  

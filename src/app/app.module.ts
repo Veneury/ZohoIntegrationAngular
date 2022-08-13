@@ -18,6 +18,8 @@ import { BodyComponent } from './body/body.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { HomeComponent } from './home/home.component';
 import { ZohoInterceptor } from './interceptor/Zoho.intercertor';
+import { NotesComponent } from './notes/notes.component';
+import { AddNotesComponent } from './notes/add-notes/add-notes.component';
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import { ZohoInterceptor } from './interceptor/Zoho.intercertor';
     LoginTemplateComponent,
     BodyComponent,
     SidenavComponent,
-    HomeComponent
+    HomeComponent,
+    NotesComponent,
+    AddNotesComponent
 
   ],
   imports: [

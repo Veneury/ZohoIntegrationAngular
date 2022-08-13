@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment';
 import { RootObject } from '../interceptor/ZohoRest.interface';
 import { LeadsSave } from '../Interfaces/SaveLeads.interfaces';
 import { TasksSave } from '../Interfaces/SaveTasks.interfaces'
+import { Notes } from '../Interfaces/Notes.interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -25,5 +26,9 @@ export class ZohoIntegrationService {
   }
   saveTasks(TasksSave:TasksSave){
     return this._httpClient.post<TasksSave>('https://localhost:44343/WeatherForecast/saveLeads/saveLeads',TasksSave);
+  }
+
+  saveNotes(notes:Notes){
+    return this._httpClient.post<Notes>('https://localhost:44343/WeatherForecast/saveNotes/saveNotes',notes);
   }
 }
