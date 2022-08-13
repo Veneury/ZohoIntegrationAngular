@@ -31,4 +31,8 @@ export class ZohoIntegrationService {
   saveNotes(notes:Notes){
     return this._httpClient.post<Notes>('https://localhost:44343/WeatherForecast/saveNotes/saveNotes',notes);
   }
+
+  getAllNotes(){
+    return this._httpClient.get<Notes>('https://localhost:44343/WeatherForecast/getNotes/getNotes');
+  }
 }

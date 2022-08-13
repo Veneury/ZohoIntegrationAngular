@@ -16,8 +16,8 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
 
   //Clientes Routes
-  { path: 'clientes/create', component: CreateClientesComponent },
-  { path: 'clientes/list', component: ListClientesComponent },
+  { path: 'clientes/create', component: CreatePosiblesClientesComponent },
+  { path: 'clientes/list', component: ListPosiblesClientesComponent },
 
   //Posibles Clientes Routes
   { path: 'posibles_clientes/create', component: CreatePosiblesClientesComponent },

@@ -15,13 +15,13 @@ export const navbarData = [
       label: 'Posibles Clientes',
     },
     {
-      routeLink: 'tareas/list',
-      icon: 'fal fa-user-tag',
-      label: 'Tareas',
-    },
-    {
       routeLink: 'notas/list',
       icon: 'fal fa-list',
       label: 'Notas',
     },
+    {
+      routeLink: 'tareas/list',
+      icon: 'fal fa-user-tag',
+      label: 'Tareas',
+    }
   ];

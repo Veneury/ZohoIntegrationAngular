@@ -1,7 +1,7 @@
-<i class="fal fa-user-plus fa-lg fa-3x"> Listado de posibles clientes</i>
+<i class="fal fa-user-plus fa-lg fa-3x"> Listado clientes</i>
 <br><br>
 <button class="btn btn-primary"><a routerLink="/posibles_clientes/create"
-        style="text-decoration: none; color: #fff; margin-top: 2%;">Agregar nuevo posible cliente</a></button>
+        style="text-decoration: none; color: #fff; margin-top: 2%;">Nuevo</a></button>
 <!-- <div class="container">
           <div class="row">
               <pre>
@@ -28,8 +28,8 @@
                     </tr>
                 </thead>
                 <tbody class="table-group-divider">
-                    <tr *ngFor="let item of resultLeads">
-                        <th scope="row">1</th>
+                    <tr *ngFor="let item of resultLeads; let index = index">
+                        <th scope="row">{{index+1}}</th>
                         <td>{{item.Company}}</td>
                         <td>{{item.Email}}</td>
                         <td>{{item.Phone}}</td>
